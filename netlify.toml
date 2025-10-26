@@ -1,0 +1,12 @@
+[build]
+  # Chỉ định thư mục chứa các tệp web của bạn.
+  # Vì index.html nằm ở gốc, chúng ta dùng "."
+  publish = "."
+
+# Bạn cũng có thể thêm các quy tắc chuyển hướng (redirects) tại đây.
+# Ví dụ:
+# [[redirects]]
+#   from = "/trang-cu"
+#   to = "/trang-moi"
+#   status = 301
+

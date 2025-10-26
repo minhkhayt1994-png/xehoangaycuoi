@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ Cho thuê Xe hoa Cưới</title>
+    <!-- Tải Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tải font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Icon (ví dụ: Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Tùy chỉnh font chữ mặc định */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Thêm hiệu ứng đổ bóng cho văn bản trên hero */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        /* Hiệu ứng cuộn mượt */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-50 top-0">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-bold text-pink-600">
+                    Xe Hoa Hạnh Phúc
+                </a>
+                
+                <!-- Menu cho Desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-pink-600 transition duration-300">Trang chủ</a>
+                    <a href="#about" class="text-gray-600 hover:text-pink-600 transition duration-300">Giới thiệu</a>
+                    <a href="#cars" class="text-gray-600 hover:text-pink-600 transition duration-300">Các loại xe</a>
+                    <a href="#contact" class="text-gray-600 hover:text-pink-600 transition duration-300">Liên hệ</a>
+                </div>
+                
+                <!-- Nút Liên hệ (Desktop) -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-pink-600 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300">
+                        Đặt xe ngay
+                    </a>
+                </div>
+
+                <!-- Nút Menu cho Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-pink-600 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menu cho Mobile (ẩn mặc định) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#home" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Trang chủ</a>
+            <a href="#about" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Giới thiệu</a>
+            <a href="#cars" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Các loại xe</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-600 hover:bg-pink-50">Liên hệ</a>
+            <a href="#contact" class="block px-4 py-4 text-center bg-pink-600 text-white font-semibold hover:bg-pink-700">Đặt xe ngay</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-[70vh] md:h-screen bg-cover bg-center flex items-center justify-center pt-16" style="background-image: url('https://placehold.co/1920x1080/ffe4e6/333?text=Xe+Hoa+C%C6%B0%E1%BB%9Bi+Sang+Tr%E1%BB%8Dng');">
+        <!-- Lớp phủ mờ -->
+        <div class="absolute top-0 left-0 w-full h-[70vh] md:h-screen bg-black bg-opacity-40"></div>
+        
+        <div class="relative z-10 text-center text-white p-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-shadow mb-4">
+                Dịch vụ xe hoa đẳng cấp
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 text-shadow">
+                Cho ngày trọng đại của bạn thêm phần trọn vẹn.
+            </p>
+            <a href="#cars" class="bg-pink-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-pink-700 transition duration-300">
+                Khám phá các loại xe
+            </a>
+        </div>
+    </section>
+
+    <!-- Giới thiệu / Tại sao chọn chúng tôi -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                Tại sao chọn <span class="text-pink-600">Xe Hoa Hạnh Phúc</span>?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-pink-100 text-pink-600 p-6 rounded-full mb-4">
+                        <i class="fas fa-car-side fa-3x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Xe sang trọng & Đa dạng</h3>
+                    <p class="text-gray-600">
+                        Cung cấp nhiều dòng xe từ cổ điển đến hiện đại: Mercedes, BMW, Audi, Lexus...
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-pink-100 text-pink-600 p-6 rounded-full mb-4">
+                        <i class="fas fa-user-tie fa-3x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Tài xế chuyên nghiệp</h3>
+                    <p class="text-gray-600">
+                        Đội ngũ tài xế lịch sự, giàu kinh nghiệm, luôn đúng giờ và am hiểu đường sá.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-pink-100 text-pink-600 p-6 rounded-full mb-4">
+                        <i class="fas fa-hand-holding-heart fa-3x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Dịch vụ tận tâm</h3>
+                    <p class="text-gray-600">
+                        Hỗ trợ trang trí xe hoa theo yêu cầu, tư vấn 24/7, giá cả cạnh tranh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Các loại xe nổi bật -->
+    <section id="cars" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                Các dòng xe hoa nổi bật
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Car 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/ffffff/pink?text=Mercedes+S-Class" alt="Xe Mercedes S-Class" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Mercedes-Benz S-Class</h3>
+                        <p class="text-gray-600 mb-4">
+                            Biểu tượng của sự sang trọng, êm ái và đẳng cấp vượt trội.
+                        </p>
+                        <a href="#contact" class="text-pink-600 font-semibold hover:underline">
+                            Yêu cầu báo giá <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Car 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/ffffff/pink?text=Lexus+ES+250" alt="Xe Lexus ES 250" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Lexus ES 250</h3>
+                        <p class="text-gray-600 mb-4">
+                            Thiết kế trẻ trung, hiện đại cùng nội thất tiện nghi hàng đầu.
+                        </p>
+                        <a href="#contact" class="text-pink-600 font-semibold hover:underline">
+                            Yêu cầu báo giá <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Car 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x400/ffffff/pink?text=Xe+Mui+Tr%E1%BA%A7n" alt="Xe Mui Trần" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">BMW 4-Series Mui Trần</h3>
+                        <p class="text-gray-600 mb-4">
+                            Lựa chọn lãng mạn, cá tính cho các cặp đôi yêu thích sự tự do.
+                        </p>
+                        <a href="#contact" class="text-pink-600 font-semibold hover:underline">
+                            Yêu cầu báo giá <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liên hệ / Đặt xe -->
+    <section id="contact" class="py-16 md:py-24 bg-pink-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                Liên hệ đặt xe
+            </h2>
+            <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-xl">
+                <form id="contact-form">
+                    <div class="space-y-4">
+                        <!-- Tên -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Họ và Tên</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        </div>
+                        <!-- Số điện thoại -->
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại</label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        </div>
+                        <!-- Ngày cưới -->
+                        <div>
+                            <label for="date" class="block text-sm font-medium text-gray-700 mb-1">Ngày cưới (dự kiến)</label>
+                            <input type="date" id="date" name="date" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                        </div>
+                        <!-- Lời nhắn -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Yêu cầu (Loại xe, lịch trình...)</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"></textarea>
+                        </div>
+                        <!-- Nút gửi -->
+                        <div>
+                            <button type="submit"
+                                class="w-full bg-pink-600 text-white p-3 rounded-lg font-semibold text-lg hover:bg-pink-700 transition duration-300">
+                                Gửi yêu cầu tư vấn
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- Thông báo thành công -->
+                <div id="success-message" class="hidden mt-4 text-center p-3 bg-green-100 text-green-700 rounded-lg">
+                    Cảm ơn bạn! Chúng tôi đã nhận được yêu cầu và sẽ liên hệ lại sớm nhất.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Giới thiệu ngắn -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Xe Hoa Hạnh Phúc</h4>
+                    <p class="text-gray-400">
+                        Cam kết mang đến dịch vụ xe hoa cưới chuyên nghiệp, sang trọng và đáng tin cậy cho ngày vui của bạn.
+                    </p>
+                </div>
+                <!-- Liên kết nhanh -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Liên kết nhanh</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-white">Về chúng tôi</a></li>
+                        <li><a href="#cars" class="hover:text-white">Dòng xe</a></li>
+                        <li><a href="#contact" class="hover:text-white">Đặt xe</a></li>
+                        <li><a href="#" class="hover:text-white">Chính sách</a></li>
+                    </ul>
+                </div>
+                <!-- Thông tin liên hệ -->
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Liên hệ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt w-5 mr-2"></i> 090x.xxx.xxx
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope w-5 mr-2"></i> info@xehoahanhphuc.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt w-5 mr-2"></i> 123 Đường Cưới, Hà Nội, Việt Nam
+                        </li>
+                    </ul>
+                    <!-- Mạng xã hội -->
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                &copy; 2025 Xe Hoa Hạnh Phúc. Đã đăng ký bản quyền.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript nội bộ -->
+    <script>
+        // Xử lý menu mobile
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Đóng menu mobile khi click vào link
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Xử lý form submit
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Ngăn form gửi đi thật
+            
+            // Ẩn form và hiển thị thông báo
+            // Trong ứng dụng thật, đây là nơi bạn gửi dữ liệu đi
+            // contactForm.style.display = 'none'; // Hoặc có thể không ẩn form
+            successMessage.classList.remove('hidden');
+            
+            // Tùy chọn: reset form sau vài giây
+            setTimeout(() => {
+                contactForm.reset();
+                successMessage.classList.add('hidden');
+            }, 5000); // Ẩn thông báo sau 5 giây
+        });
+    </script>
+
+</body>
+</html>
+
